@@ -1,0 +1,15 @@
+{
+  "name": "archive",
+  "description": "희림 사내 건축 사례 아카이브 — Claude 플러그인",
+  "owner": {
+    "name": "HeeAI",
+    "url": "https://heeai.cloud"
+  },
+  "plugins": [
+    {
+      "name": "archive",
+      "source": "./plugins/archive",
+      "description": "희림 사내 건축 사례 아카이브에서 사례를 찾아 사진 카드로 보고 원문 링크·비슷한 사례·북마크를 다룹니다(희림 사내용)."
+    }
+  ]
+}
