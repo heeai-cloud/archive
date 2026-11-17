@@ -9,7 +9,7 @@ Claude 채팅·Cowork·Claude Code에서 희림 사내 건축 사례 아카이�
 - 사진으로 찾기: 카드 화면의 «사진 고르기»에 사진을 끌어 놓거나 붙여 넣습니다. Claude Code·Cowork에서는 Claude가 사진 파일을 직접 올립니다. 올린 사진은 검색에만 쓰고 1시간 뒤 지웁니다.
 - 사진의 저작권은 원 사진가에게 있고 ArchDaily에서 가져왔습니다. 사내 참고용으로만 씁니다.
 - 주고받는 곳: dailyarchive.heeai.cloud 한 곳입니다.
-- `/archive`만 입력하면 할 수 있는 것과 질문 예를 먼저 보여 줍니다.
+- `/archive`만 입력하면 검색창·예시·사진으로 찾기·내 북마크가 있는 첫 화면이 뜹니다(Claude 채팅·Cowork). Claude Code에서는 선택지 메뉴에서 고릅니다.
 - 설치 안내: https://dailyarchive.heeai.cloud/claude/ · 사용법(질문 예와 받는 답): https://dailyarchive.heeai.cloud/claude/usage (둘 다 희림 아이디로 로그인해서 엽니다)
 
 © HeeAI. All rights reserved.
