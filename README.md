@@ -1,6 +1,6 @@
-# 사례 아카이브 for Claude
+# 사례 아카이브 for ChatGPT & Claude
 
-희림 사내 건축 사례 아카이브(dailyarchive.heeai.cloud)를 Claude에서 쓰는 플러그인입니다. ArchDaily 프로젝트 약 5만 9천 건에서 사례를 찾아 사진 카드로 보고, 사진으로도 찾습니다. 원문 링크·비슷한 사례·북마크·컬렉션을 대화에서 다룹니다.
+희림 사내 건축 사례 아카이브(dailyarchive.heeai.cloud)를 ChatGPT와 Claude에서 쓰는 플러그인입니다. ArchDaily 프로젝트 약 5만 9천 건에서 사례를 찾아 사진 카드로 보고, 사진으로도 찾습니다. 원문 링크·비슷한 사례·북마크·컬렉션을 대화에서 다룹니다.
 
 로그인은 heeai.cloud 희림 아이디로 합니다. 희림 아이디가 없으면 쓸 수 없습니다.
 
@@ -20,6 +20,15 @@ claude plugin install archive --marketplace heeai-cloud/archive
 
 설치한 다음 `/mcp`에서 archive를 골라 로그인합니다.
 
+## ChatGPT 앱(데스크톱)
+
+1. 설정 → 플러그인에서 «추가 → 마켓플레이스 추가»를 누릅니다.
+2. «출처»에 `heeai-cloud/archive`(저장소 이름)을 넣고 «마켓플레이스 추가»를 누릅니다. Git ref와 Sparse 경로는 그대로 둡니다.
+3. «디렉터리 찾아보기»에서 플러그인(archive)을 설치하고 희림 아이디로 로그인합니다.
+4. 로그인한 다음 새 대화를 열고 `@archive` 뒤에 부탁할 내용을 적습니다.
+
+ChatGPT에서는 Claude 앱에서 뜨는 카드 화면이 뜨지 않습니다.
+
 ## 쓰는 법
 
 - `/archive 목조 도서관` (Cowork는 `/archive:archive`, 채팅에서는 그냥 말해도 됩니다)
@@ -33,6 +42,6 @@ claude plugin install archive --marketplace heeai-cloud/archive
 
 ## 주고받는 곳
 
-dailyarchive.heeai.cloud 한 곳입니다. 검색 기록·북마크·컬렉션은 희림 사내 서버에 저장되고 Claude 대화 내용은 받지 않습니다. 사진으로 찾을 때 올린 사진은 검색에만 쓰고 1시간 뒤 지웁니다.
+dailyarchive.heeai.cloud 한 곳입니다. 검색 기록·북마크·컬렉션은 희림 사내 서버에 저장되고 대화 내용은 받지 않습니다. 사진으로 찾을 때 올린 사진은 검색에만 쓰고 1시간 뒤 지웁니다.
 
 © HeeAI. All rights reserved.
