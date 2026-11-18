@@ -14,7 +14,6 @@ argument-hint: "[찾는 사례 — 예: 목조 도서관]"
 - 사례 아카이브 도구(`search_cases`, `get_case` …)가 안 보이면 연결부터 안내한다. 커넥터 주소는 `https://dailyarchive.heeai.cloud/mcp`이고, 연결할 때 heeai.cloud 로그인 화면(희림 아이디, 사내 도구 대문과 같은 아이디)이 뜬다. 이미 대문에 로그인된 브라우저면 «연결» 확인 화면만 나온다.
   - Claude Code: `/mcp` → archive → Authenticate.
   - claude.ai·Cowork: 플러그인의 **커넥터(Connectors)** 탭에서 archive «연결».
-  - ChatGPT 앱(데스크톱): 설정 → 플러그인 → archive에서 희림 아이디로 로그인한다. 도구는 이 컴퓨터에서 도는 대화(«작업 위치» = «이 컴퓨터»·로컬에서 작업)에만 붙는다. 일반 채팅이나 «클라우드에서 작업»으로 도는 대화라서 도구가 안 보이면, 연결을 다시 하라고 하지 말고 새 대화의 «작업 위치»를 «이 컴퓨터»로 바꿔 다시 부탁하라고 안내한다. Windows용 앱은 로그인한 뒤에도 연결이 안 될 수 있다(앱 쪽 문제).
   - 회사 조직 계정으로 쓰는데 «연결»이 눌리지 않으면 조직 관리자(Owner)가 먼저 **조직 설정 → 커넥터(Organization settings → Connectors)**에서 `https://dailyarchive.heeai.cloud/mcp`를 커스텀 커넥터로 추가해야 한다. OAuth 클라이언트는 Claude가 찾은 «자동으로 등록» 그대로 둔다.
   - 설치 안내: https://dailyarchive.heeai.cloud/claude/ (희림 아이디로 로그인해서 연다)
 - 도구가 «unauthorized»·401로 실패하면 연결이 풀린 것이다(heeai.cloud 비밀번호를 바꿨거나 관리자가 로그아웃시킨 경우). 같은 방법으로 다시 연결하라고 안내한다.
@@ -23,7 +22,6 @@ argument-hint: "[찾는 사례 — 예: 목조 도서관]"
 - 요청이 비어 있으면(`/archive`만 입력) 무엇을 찾을지 고르게 한다.
   - 보기 창이 뜨는 앱(claude.ai 채팅·Cowork): `archive_home`을 부른다. 검색창·예시·«사진으로 찾기»·«내 북마크·컬렉션»이 있는 첫 화면이 뜨고 사용자는 그 안에서 바로 찾는다. 보기 창에서 찾은 결과는 대화 맥락으로 들어온다. 답은 «아래에서 찾거나 바로 물어보세요» 한 줄만 쓴다.
   - Claude Code(터미널, 데스크톱 Code 탭): 보기 창이 안 보이므로 도구를 부르지 않고 AskUserQuestion 질문 하나로 고르게 한다. 선택지는 넷이다. 사례 찾기(«목조 도서관 사례 찾아 줘»), 조건 붙여 찾기(«일본 중정형 공동주택, 2015년 이후»), 사진으로 찾기(사진 파일을 주고 «이 사진이랑 비슷한 사례»), 내 북마크·컬렉션. 고르면 찾을 말이나 사진 파일 경로를 묻고 진행한다. AskUserQuestion을 쓸 수 없으면 같은 넷을 짧은 목록으로 보여 주고 묻는다.
-  - ChatGPT 앱(데스크톱): 보기 창이 뜨지 않고 AskUserQuestion도 없다. 도구를 부르지 않고 Claude Code와 같은 선택지를 번호 목록으로 보여 준 다음 사용자의 답을 기다린다.
   - 어느 쪽인지 모르겠으면 `archive_home`을 부르고 결과의 `for_claude`를 따른다.
   - 자세한 사용법은 https://dailyarchive.heeai.cloud/claude/usage (희림 아이디로 로그인해서 연다).
 - `search_cases`: query에는 사용자가 쓴 말을 그대로 넣는다(한국어·영어 모두 된다). 유형·국가·재료·연도·면적 조건이 분명하면 필터로도 넣는다. 필터 값이 헷갈리면 `list_case_filters`로 정확한 값을 먼저 본다(유형·재료는 한국어, 국가는 영어 이름).
